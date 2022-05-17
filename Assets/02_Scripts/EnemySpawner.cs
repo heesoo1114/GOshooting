@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] StageData stagedata;
+    [SerializeField] float spawnTime = 0.35f;
+    [SerializeField] GameObject enemyPrefabs;
+
+    private void Awake()
     {
-        
+        StartCoroutine("SpawnEnemy");
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnEnemy()
     {
-        
+        while(true)
+        {
+
+            float positionX = Random.Range(stagedata.LimitMin.x, stagedata.LimitMax.x);
+
+            Instantiate(enemyPrefabs, new Vector3(positionX, stagedata.LimitMax.y + 1.0f, 0.0f), Quaternion.identity);
+
+            yield return new WaitForSeconds(spawnTime);
+
+
+
+        }
     }
+
 }
