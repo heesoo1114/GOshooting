@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E0E6773F-9864-255F-801A-E3CC1A24A3EF}</ProjectGuid>
+    <ProjectGuid>{FC05C21C-CA60-B432-05F0-2C8D674AB96F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,9 @@
     <Compile Include="Assets\02_Scripts\Weapon.cs" />
     <Compile Include="Assets\02_Scripts\Movement.cs" />
     <Compile Include="Assets\02_Scripts\PositionScroller.cs" />
+    <Compile Include="Assets\02_Scripts\Twinkle.cs" />
+    <Compile Include="Assets\02_Scripts\MeteoriteSpawner.cs" />
+    <Compile Include="Assets\02_Scripts\PositionAutoDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
