@@ -41,14 +41,21 @@ public class PlayerController : MonoBehaviour
                                          Mathf.Clamp(transform.position.y, stageData.LimitMin.y, stageData.LimitMax.y),
                                          0);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    /*
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy")
-            {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-        
             
+        }
+        if (collision.gameObject.CompareTag("Meteorite"))
+        {
+            Destroy(collision.gameObject);
+            
+        }
     }
+    */
+
 }

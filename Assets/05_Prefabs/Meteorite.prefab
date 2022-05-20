@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6345351680335546004}
   - component: {fileID: -7123862844765838645}
   - component: {fileID: 6782969886960952417}
+  - component: {fileID: -1725341865328713097}
   m_Layer: 0
   m_Name: Meteorite
-  m_TagString: Untagged
+  m_TagString: Meteorite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,11 +110,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.25, y: 0.25}
+  m_Offset: {x: 0.0030057877, y: -0.009393096}
+  m_Size: {x: 0.20491314, y: 0.23121381}
   m_Direction: 0
 --- !u!114 &6782969886960952417
 MonoBehaviour:
@@ -128,3 +129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: dc928bbf83842344489bdf550d0ee4a6, type: 2}
+--- !u!114 &-1725341865328713097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014002883298502419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c42ce5b421e684dade151eae9c15db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

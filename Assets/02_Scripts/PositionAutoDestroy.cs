@@ -10,6 +10,7 @@ public class PositionAutoDestroy : MonoBehaviour
 
     private void LateUpdate()
     {
+        
         if( transform.position.x > stageData.LimitMax.x + destroyWeight ||
             transform.position.y > stageData.LimitMax.y + destroyWeight ||
             transform.position.x < stageData.LimitMin.x - destroyWeight ||
@@ -17,5 +18,8 @@ public class PositionAutoDestroy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        
+        
     }
 }
