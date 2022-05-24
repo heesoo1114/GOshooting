@@ -8,12 +8,29 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] float maxHP = 10;
     float currentHP;
     SpriteRenderer spriteRenderer;
+
+    public float MaxHP 
+    {
+       
+        get 
+        { 
+            return maxHP; 
+        } 
     
+    }
+    
+    public float CuurentHP
+    {
+        get
+        {
+            return currentHP;
+        }
+    }
     
     // Start is called before the first frame update
     void Start()
     {
-        currentHP = 0;
+        currentHP = MaxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

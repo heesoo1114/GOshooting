@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\02_Scripts\PositionAutoDestroy.cs" />
     <Compile Include="Assets\02_Scripts\StageData.cs" />
+    <Compile Include="Assets\02_Scripts\DestoryProjectile.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerHP.cs" />
     <Compile Include="Assets\02_Scripts\PlayerController.cs" />
     <Compile Include="Assets\02_Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\02_Scripts\Weapon.cs" />
@@ -67,8 +69,7 @@
     <Compile Include="Assets\02_Scripts\PositionScroller.cs" />
     <Compile Include="Assets\02_Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\02_Scripts\DestoryMeteorite.cs" />
-    <Compile Include="Assets\02_Scripts\DestoryProjectile.cs" />
-    <Compile Include="Assets\02_Scripts\PlayerHP.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerHPViewer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
