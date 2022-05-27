@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02_Scripts\PositionAutoDestroy.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerHPViewer.cs" />
     <Compile Include="Assets\02_Scripts\StageData.cs" />
     <Compile Include="Assets\02_Scripts\DestoryProjectile.cs" />
     <Compile Include="Assets\02_Scripts\PlayerHP.cs" />
@@ -69,7 +70,31 @@
     <Compile Include="Assets\02_Scripts\PositionScroller.cs" />
     <Compile Include="Assets\02_Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\02_Scripts\DestoryMeteorite.cs" />
-    <Compile Include="Assets\02_Scripts\PlayerHPViewer.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerScoreViewer.cs" />
+    <Compile Include="Assets\02_Scripts\ButtonEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TMP\Shaders\TMPro.cginc" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TMP\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TMP\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TMP\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TMP\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TMP\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TMP\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TMP\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TMP\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TMP\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TMP\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

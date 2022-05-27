@@ -8,8 +8,11 @@ public class DestoryProjectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+            // Destroy(collision.gameObject);
+            collision.GetComponent<DestroyEnemy>().Die();
             Destroy(gameObject);
         }
     }
+
+    
 }
