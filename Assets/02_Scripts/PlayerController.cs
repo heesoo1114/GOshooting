@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerController : MonoBehaviour
     StageData stageData;
     Movement movement;
     private Weapon weapon;
+    
+    Animator animator;
+    bool isDie = false;
 
     int score;
     
@@ -40,11 +44,15 @@ public class PlayerController : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         weapon = GetComponent<Weapon>();
+        animator = GetComponent<Animator>();
     }
 
 
     void Update()
     {
+
+        if (isDie) return;
+        
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
@@ -67,6 +75,21 @@ public class PlayerController : MonoBehaviour
                                          0);
     }
 
+    public void Die()
+    {
+        PlayerPrefs.SetInt("Score", score);
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void OnDieEnvent()
+    {
+        movement.MoveTo(Vector2.zero);
+        animator.SetTrigger("onDie");
+        Destroy(GetComponent<CircleCollider2D>());
+        isDie = true;
+    }
+    
+    
     /*
     public void OnTriggerEnter2D(Collider2D collision)
     {

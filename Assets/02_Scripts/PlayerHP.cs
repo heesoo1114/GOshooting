@@ -8,8 +8,11 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] float maxHP = 10;
     float currentHP;
     SpriteRenderer spriteRenderer;
+    PlayerController playerController;
+    public float MaxHP => maxHP;
+    public float CurrentHP => currentHP;
 
-    public float MaxHP 
+    /*public float MaxHP 
     {
        
         get 
@@ -19,19 +22,20 @@ public class PlayerHP : MonoBehaviour
     
     }
     
-    public float CuurentHP
+    public float CurrentHP
     {
         get
         {
             return currentHP;
         }
-    }
+    }*/
     
     // Start is called before the first frame update
     void Start()
     {
         currentHP = MaxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerController = GetComponent<PlayerController>();
     }
 
     public void TakeDamage(float damage)
@@ -39,6 +43,11 @@ public class PlayerHP : MonoBehaviour
         currentHP -= damage;
         StopCoroutine("HitColorAnimation");
         StartCoroutine("HitColorAniamation");
+
+        if ( currentHP <= 0)
+        {
+            playerController.Die();
+        }
     }
 
     IEnumerator HitColorAniamation()

@@ -19,6 +19,6 @@ public class PlayerHPViewer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sliderHP.value = playerHP.CuurentHP / playerHP.MaxHP;
+        sliderHP.value = playerHP.CurrentHP / playerHP.MaxHP;
     }
 }
