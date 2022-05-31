@@ -8,6 +8,7 @@ public class DestroyEnemy : MonoBehaviour
     [SerializeField] float damage = 1;
     [SerializeField] int scorePoint = 100;
     PlayerController playerController;
+    [SerializeField] GameObject explosionPrefab;
 
     private void Awake()
     {
@@ -29,7 +30,9 @@ public class DestroyEnemy : MonoBehaviour
     public void Die()
     {
         playerController.Score += scorePoint;
+        GameObject clone = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        Destroy(clone.gameObject, 1f);
     }
 }
 
