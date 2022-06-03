@@ -793,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439203046}
   - component: {fileID: 1439203047}
+  - component: {fileID: 1439203048}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -829,6 +830,20 @@ MonoBehaviour:
   stagedata: {fileID: 11400000, guid: dc928bbf83842344489bdf550d0ee4a6, type: 2}
   spawnTime: 0.35
   enemyPrefabs: {fileID: 4601048669412710330, guid: cfa04126cd29c05468501ac92e8602ac, type: 3}
+--- !u!114 &1439203048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439203045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b9f3a59b8876b469be348bb3ae041a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4601048669412710330, guid: cfa04126cd29c05468501ac92e8602ac, type: 3}
+  poolSize: 10
 --- !u!1 &1610955514
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1009,7 @@ GameObject:
   - component: {fileID: 1811077751}
   - component: {fileID: 1811077749}
   - component: {fileID: 1811077752}
+  - component: {fileID: 1811077753}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1187,6 +1203,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 10
+--- !u!114 &1811077753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811077743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b9f3a59b8876b469be348bb3ae041a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8620115257074138858, guid: 682c1762ab690cd41bafb84652cec533, type: 3}
+  poolSize: 10
 --- !u!1 &2089446142
 GameObject:
   m_ObjectHideFlags: 0

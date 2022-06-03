@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class PositionAutoDestroy : MonoBehaviour
 {
-    
+
+    ObjectPooler enemyPooler;
+    ObjectPooler bulletPooler;
     [SerializeField] StageData stageData;
     float destroyWeight = 2f;
+
+    private void Start()
+    {
+        bulletPooler = GameObject.Find("Player").GetComponent<ObjectPooler>();
+        enemyPooler = GameObject.Find("EnemySpawner").GetComponent<ObjectPooler>();
+
+    }
 
     private void LateUpdate()
     {
@@ -16,10 +25,18 @@ public class PositionAutoDestroy : MonoBehaviour
             transform.position.x < stageData.LimitMin.x - destroyWeight ||
             transform.position.y < stageData.LimitMin.y - destroyWeight)
         {
-            Destroy(gameObject);
+            if(gameObject.tag == "Bullet")
+            {
+                bulletPooler.ReturnObject(gameObject);
+            }
+            else if(gameObject.tag == "Enemy1")
+            {
+                enemyPooler.ReturnObject(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        
-        
-        
     }
 }
